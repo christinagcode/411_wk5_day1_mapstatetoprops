@@ -9,17 +9,17 @@ const Home = (props) => {
             {props.cars.map((car, idx) => (
                 <Card key={idx} className="card">
                     <CardContent className="text-gray">
-                        <span>{props.car.Name.toUpperCase()}</span>
+                        <span>{car.Name.toUpperCase()}</span>
                         <ul>
-                        <li>Miles_per_Gallon: {props.car["Miles_per_Gallon"]}</li>
-                        <li>Cylinders: {props.car["Cylinders"]}</li>
-                        <li>Displacement: {props.car["Displacement"]}</li>
-                        <li>Horsepower: {props.car["Horsepower"]}</li>
+                        <li>Miles_per_Gallon: {car["Miles_per_Gallon"]}</li>
+                        <li>Cylinders: {car["Cylinders"]}</li>
+                        <li>Displacement: {car["Displacement"]}</li>
+                        <li>Horsepower: {car["Horsepower"]}</li>
                         </ul>
                     </CardContent>
                     <Divider />
                     <CardActions style={{ color: 'mediumblue' }}>
-                        <Link to={`/car/${props.car.id}`}>See More Details</Link>
+                        <Link to={`/car/${car.id}`}>See More Details</Link>
                     </CardActions>
                 </Card>
             ))}

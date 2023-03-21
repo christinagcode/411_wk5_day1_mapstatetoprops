@@ -1,11 +1,11 @@
 import {connect} from 'react-redux';
-import dashboard from '.Dashboard'
+import Dashboard from '../components/Dashboard'
 
 const mapStateToProps = (state) => {
     return {
-        users,
+        user: state.user,
         cars: state.cars
     }
 };
 
-export default connect(mapStateToProps)
+export default connect(mapStateToProps)(Dashboard)
