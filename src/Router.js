@@ -12,6 +12,8 @@ const Router = () => {
             <Route path="/about" component={About} />
             <Route path="/car/:id" component={Car} />
             <Route path="/dashboard" component={Dashboard} />
+            <Dashboard />
+            <Car />
         </Switch>
     );
 };
